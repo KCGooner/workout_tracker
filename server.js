@@ -13,12 +13,13 @@ app.use(express.json());
 
 app.use(express.static('public'));
 //mongoose connect string, using the localhost 'fitnesstracker'
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/fitnesstracker', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', { useNewUrlParser: true });
 
-//Post Route
-
+//Routes
+app.use(require("./routes/html-routes"));
+// app.use(require("./public/routes/api-routes.js"));
 
 //Validation server is running on correct port
 app.listen(PORT, () => {
-    console.log(`App running on port ${PORT}!`);
+    console.log(`App listening on Port: ${PORT}!`);
 });
