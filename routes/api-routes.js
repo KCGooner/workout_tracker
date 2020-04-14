@@ -9,8 +9,6 @@ router.post('/api/workouts', ({ body }, res) => {
     })
 });
 
-
-
 router.get('/api/workouts', (req, res) => {
   Workout.find({})
     .sort({ date: -1 })
