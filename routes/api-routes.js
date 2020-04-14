@@ -7,6 +7,9 @@ router.post('/api/workouts', ({ body }, res) => {
     .then((result) => {
       res.json(result);
     })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
 });
 
 router.get('/api/workouts', (req, res) => {
@@ -22,6 +25,9 @@ router.get('/api/workouts', (req, res) => {
       });
       res.json(result);
     })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
 });
 
 router.put('/api/workouts/:id', (req, res) => {
@@ -33,6 +39,9 @@ router.put('/api/workouts/:id', (req, res) => {
     .then((result) => {
       res.json(result);
     })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
 });
 
 router.get('/api/workouts/range', (req, res) => {
@@ -41,6 +50,9 @@ router.get('/api/workouts/range', (req, res) => {
     .then((result) => {
       res.json(result);
     })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
 });
 
 module.exports = router;
