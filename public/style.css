@@ -45,6 +45,10 @@ header h1 {
   transform: skewX(-2deg);
 }
 
+h2 {
+  text-align: center;
+}
+
 select {
   display: block;
   -moz-appearance: none;
